@@ -7,8 +7,12 @@ from PyQt5.QtGui import QPainter, QColor
 class Program(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.pushButton.clicked.connect(self.Chircle)
         self.painter = None
+        self.setupUi(self)
+        self.initUi()
+
+    def initUi(self):
+        self.pushButton.clicked.connect(self.Chircle)
 
     def Chircle(self):
         self.painter = True
